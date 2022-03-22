@@ -34,6 +34,9 @@
 
 
 /*Global*/
+.hidden{
+    display: none;
+}
 .page-body {
     font-family: "Roboto";
     font-weight: 400;
@@ -41,9 +44,81 @@
     line-height: 24px;
     background-color: var(--basic-white);
 }
-.conteiner {
-text-align: center;
+
+.link{
+    text-decoration: none;
+    text-transform: uppercase;
 }
-.nav-list{
+.list{
+    list-style-type: none;
+}
+
+.nav-item .link{
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 30px;    
+    color: var(--basic-black);
+    align-items: center; 
+}
+
+.greeting .button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 240px;
+    height: 50px;
+    border-radius: 3px;
+    color: var(--basic-white);
+    background-color: var(--basic-pink);   
+  
+}
+.servicies .button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 160px;
+    height: 50px;   
+    border-radius: 3px;
+    color: var(--basic-white);  
+}
+.web-sites .button {
+    background-color: var(--basic-pink);
+}
+.adds .button {
+    background-color: var(--basic-green);
+}
+.presentations .button {
+    background-color: var(--basic-yellow);
+}
+.header-size-55{
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 55px;
+}
+.header-size-45{
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+}
+.header-size-45-64{
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 64px;
+}
+.header-size-36{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+}
+.header-size-24{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.header-size-16{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
     text-transform: uppercase;
 }
