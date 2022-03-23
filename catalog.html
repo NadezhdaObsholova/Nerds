@@ -12,94 +12,259 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="page-body inner-page">
+    <div class="conteiner">
+        <header class="main-header">
+            <h1 class="hidden">НАВИГАЦИЯ ПО САЙТУ</h1>
 
-    <header class="main-header">
-        <h1 class="hidden">НАВИГАЦИЯ ПО САЙТУ</h1>
-
-        <div>
-            <a class="link main-logo" href="index.html">
-                <img class="img main-logo" src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии"></a>
-        </div>
-
-        <div> <a class="link" href="blank.html">Студия</a> </div>
-        <div> <a class="link" href="blank.html">Клиенты</a> </div>
-        <div> <a class="link" href="blank.html">Магазин</a> </div>
-        <div> <a class="link" href="blank.html">Контакты</a> </div>
-
-        <div>
-            <a class="link main-cart" href="blank.html">Корзина</a>
-        </div>
-    </header>
-    <main class="main-content">
-        <h1 class="hidden">ИНТЕРНЕТ-МАГАЗИН "НЁРДС"</h1>
-        <section class="greeting">
-            <h2 class="hidden">ПРИВЕТСТВИЕ</h2>
-            <div class="greeting-header">Магазин готовых шаблонов
+            <div>
+                <a class="link main-logo" href="index.html">
+                    <img class="img main-logo" src="img/nerds-logo.png"
+                        width="160" height="65" alt="Логотип студии"></a>
             </div>
-        </section>
-        <section class="filter">
-            <h2 class="hidden">ФИЛЬТР</h2>
-            <div class="cost">Стоимость
-                <div class="slider-holder">
-                    <div class="slidecontainer">
 
-                        <input type="range" min="1" max="150" value="100" class="slider" id="myRange">
+            <div> <a class="link" href="blank.html">Студия</a> </div>
+            <div> <a class="link" href="blank.html">Клиенты</a> </div>
+            <div> <a class="link shop" href="">Магазин</a> </div>
+            <div> <a class="link" href="blank.html">Контакты</a> </div>
+
+            <div>
+                <a class="link main-cart" href="blank.html">Корзина</a>
+            </div>
+        </header>
+        <main class="main-content">
+            <h1 class="hidden">ИНТЕРНЕТ-МАГАЗИН "НЁРДС"</h1>
+            <section class="greeting">
+                <h2 class="hidden">ПРИВЕТСТВИЕ</h2>
+                <div class="greeting-header">Магазин готовых шаблонов
+                </div>
+            </section>
+            <div class="catalog">
+
+                <section class="filter">
+                    <h2 class="hidden">ФИЛЬТР</h2>
+                    <div class="cost">Стоимость
+                        <div class="slider-holder">
+                            <div class="slidecontainer">
+
+                                <input type="range" min="1" max="150"
+                                    value="100" class="slider" id="myRange">
+                            </div>
+                        </div>
                     </div>
+                    <form method="get" action="https://echo.htmlacademy.ru">
+                        <fieldset>
+                            <legend>Сетка</legend>
+                            <ul class="list">
+                                <li>
+                                    <input type="radio" name="grid"
+                                        value="adopted" id="radio-adopted"
+                                        checked>
+                                    <label
+                                        for="radio-adopted">Адоптивная</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="grid"
+                                        value="fixed" id="radio-fixed">
+                                    <label
+                                        for="radio-fixed">Фиксированная</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="grid"
+                                        value="flexed" id="radio-flexed">
+                                    <label for="radio-flexed">Резиновая</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Особенности</legend>
+                            <ul class="list">
+                                <li>
+                                    <input type="checkbox" name="slider"
+                                        id="filter-slider" checked>
+                                    <label for="filter-slider">Слайдер</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="benefits"
+                                        id="filter-benefits">
+                                    <label for="filter-benefits">Блок
+                                        преимуществ</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="news"
+                                        id="filter-news" checked>
+                                    <label for="filter-news">Новости</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="galery"
+                                        id="filter-galery">
+                                    <label for="filter-galery">Галерея</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="cart"
+                                        id="filter-cart">
+                                    <label for="filter-cart">Корзина</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <button type="submit">Показать</button>
+                    </form>
+
+
+                    <div class="grid">
+                    </div>
+                    <div class="features">
+                    </div>
+                    <div class="button">
+                    </div>
+                </section>
+                <section class="templates">
+                    <h2 class="hidden">ШАБЛОНЫ</h2>
+                    <ul class="list">
+                        <li>
+                            <p>Сортировать</p>
+                        </li>
+                        <li>
+                            <button>по типу</button>
+                            <button>по цене</button>
+                            <button>по названию</button>
+                        </li>
+                        <li class="card">
+                            <img class="img card-top-line"
+                                src="img/catalog/card-top-line.svg" width="360"
+                                height="40">
+                            <img class="img" src="img/catalog/sedona.jpg"
+                                width="360" height="580">
+                            <div class="choose-hider">
+                                <div class="chosen-card">
+                                    <a class="link name-card" href="">Sedona</a>
+                                    <p class="about-card">Информационный
+                                        сайт<br>для
+                                        туристов</p>
+                                    <button class="buy">9 900 &#8381;</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <img class="img card-top-line"
+                                src="img/catalog/card-top-line.svg" width="360"
+                                height="40">
+                            <img class="img" src="img/catalog/pink-app.jpg"
+                                width="360" height="580">
+                            <div class="choose-hider">
+                                <div class="chosen-card">
+                                    <a class="link name-card" href="">Pink
+                                        App</a>
+                                    <p class="about-card">Продуктовый
+                                        лендинг<br>приложения для iOS и Android
+                                    </p>
+                                    <button class="buy">9 900 &#8381;</button>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="card">
+                            <img class="img card-top-line"
+                                src="img/catalog/card-top-line.svg" width="360"
+                                height="40">
+                            <img class="img" src="img/catalog/borodinski.jpg"
+                                width="360" height="580">
+                            <div class="choose-hider">
+                                <div class="chosen-card">
+                                    <a class="link name-card"
+                                        href="">Borodinski</a>
+                                    <p class="about-card">Описание компании</p>
+                                    <button class="buy">9 900 &#8381;</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <img class="img card-top-line"
+                                src="img/catalog/card-top-line.svg" width="360"
+                                height="40">
+                            <img class="img" src="img/catalog/mishka.jpg"
+                                width="360" height="580">
+                            <div class="choose-hider">
+                                <div class="chosen-card">
+                                    <a class="link name-card" href="">Mishka</a>
+                                    <p class="about-card">Описание компании</p>
+                                    <button class="buy">9 900 &#8381;</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <img class="img card-top-line"
+                                src="img/catalog/card-top-line.svg" width="360"
+                                height="40">
+                            <img class="img" src="img/catalog/aplus.jpg"
+                                width="360" height="580">
+                            <div class="choose-hider">
+                                <div class="chosen-card">
+                                    <a class="link name-card" href="">A+</a>
+                                    <p class="about-card">Описание компании</p>
+                                    <button class="buy">9 900 &#8381;</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="card">
+                            <img class="img card-top-line"
+                                src="img/catalog/card-top-line.svg" width="360"
+                                height="40">
+                            <img class="img" src="img/catalog/kvast.jpg"
+                                width="360" height="580">
+                            <div class="choose-hider">
+                                <div class="chosen-card">
+                                    <a class="link name-card" href="">Кваст</a>
+                                    <p class="about-card">Промо-сайт
+                                        производителя<br>крафтового кваса</p>
+                                    <button class="buy">9 900 &#8381;</button>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </section>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <h1 class="hidden">КАК НАС НАЙТИ</h1>
+            <div class="map"><img class="img" src="img/map.jpg"></div>
+            <div class="footer-bottom">
+                <ul class="list">
+                    <li>
+                        <a class="social-media" href="https://vk.com">
+                            <img class="img social-logo" src="img/vk-icon.png"
+                                width="26.1" height="15" alt="логотип VK">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-media" href="https://facebook.com">
+                            <img class="img social-logo" src="img/fb-icon.png"
+                                width="12" height="22" alt="логотип Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-media" href="https://instagram.com">
+                            <img class="img social-logo"
+                                src="img/insta-icon.png" width="21" height="21"
+                                alt="логотип Instagram">
+                        </a>
+                    </li>
+                </ul>
+                <div class="sales">
+                    <p class="header-footer">Давайте дружить, это выгодно!</p>
+                    <p>Скидка 10% для друзей из социальных сетей.</p>
                 </div>
             </div>
 
-
-            <div class="grid">
-            </div>
-            <div class="features">
-            </div>
-            <div class="button">
-            </div>
-        </section>
-        <section class="templates">
-            <h2 class="hidden">ШАБЛОНЫ</h2>
-            <div class="sort">
-            </div>
-            <div class="cards">
-            </div>
-            <div class="pages">
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <h1 class="hidden">КАК НАС НАЙТИ</h1>
-        <div class="map"><img class="img" src="img/map.jpg"></div>
-        <div class="footer-bottom">
-            <ul class="list">
-                <li>
-                    <a class="social-media" href="https://vk.com">
-                        <img class="img social-logo" src="img/vk-icon.png" width="26.1" height="15" alt="логотип VK">
-                    </a>
-                </li>
-                <li>
-                    <a class="social-media" href="https://facebook.com">
-                        <img class="img social-logo" src="img/fb-icon.png" width="12" height="22"
-                            alt="логотип Facebook">
-                    </a>
-                </li>
-                <li>
-                    <a class="social-media" href="https://instagram.com">
-                        <img class="img social-logo" src="img/insta-icon.png" width="21" height="21"
-                            alt="логотип Instagram">
-                    </a>
-                </li>
-            </ul>
-            <div class="sales">
-                <p class="header-footer">Давайте дружить, это выгодно!</p>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
-            </div>
-        </div>
-
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>
