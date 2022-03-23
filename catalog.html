@@ -1,63 +1,105 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Nerds Catalog</title>
-    </head>
-    <body>
-        <header class="main-header">
-          <h1>НАВИГАЦИЯ ПО САЙТУ</h1>          
-          <nav class="header-nav">
-              <ul>
-                  <li><a href="index.html"><img src="img/nerds-logo.png" alt="Логотип студии"></a></li>
-                  <li><a href="blank.html">СТУДИЯ</a></li>
-                  <li><a href="blank.html">КЛИЕНТЫ</a></li>
-                  <li><a href="blank.html">МАГАЗИН</a></li>
-                  <li><a href="blank.html">КОНТАКТЫ</a></li>
-                  <li><a href="blank.html">КОРЗИНА</a></li>
-              </ul>              
-          </nav>
-        </header>
-        <main>
-            <h1>ИНТЕРНЕТ-МАГАЗИН "НЁРДС"</h1>
-            <section class="greeting">
-                <h2>ПРИВЕТСТВИЕ</h2>
-                <div>
-                    <p class="header-size-55">Магазин готовых шаблонов</p>
-                </div> 
-            </section>
-            <section class="filter">
-                <h2>ФИЛЬТР</h2>
-                <div class="cost">                   
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nerds Catalog</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/32.png" type="image/svg+xml">
+    <link rel="icon" href="img/favicon/152.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="page-body inner-page">
+
+    <header class="main-header">
+        <h1 class="hidden">НАВИГАЦИЯ ПО САЙТУ</h1>
+
+        <div>
+            <a class="link main-logo" href="index.html">
+                <img class="img main-logo" src="img/nerds-logo.png" width="160" height="65" alt="Логотип студии"></a>
+        </div>
+
+        <div> <a class="link" href="blank.html">Студия</a> </div>
+        <div> <a class="link" href="blank.html">Клиенты</a> </div>
+        <div> <a class="link" href="blank.html">Магазин</a> </div>
+        <div> <a class="link" href="blank.html">Контакты</a> </div>
+
+        <div>
+            <a class="link main-cart" href="blank.html">Корзина</a>
+        </div>
+    </header>
+    <main class="main-content">
+        <h1 class="hidden">ИНТЕРНЕТ-МАГАЗИН "НЁРДС"</h1>
+        <section class="greeting">
+            <h2 class="hidden">ПРИВЕТСТВИЕ</h2>
+            <div class="greeting-header">Магазин готовых шаблонов
+            </div>
+        </section>
+        <section class="filter">
+            <h2 class="hidden">ФИЛЬТР</h2>
+            <div class="cost">Стоимость
+                <div class="slider-holder">
+                    <div class="slidecontainer">
+
+                        <input type="range" min="1" max="150" value="100" class="slider" id="myRange">
+                    </div>
                 </div>
-                <div class="grid">                   
-                </div>
-                <div class="features">                   
-                </div>
-                <div class="button">                   
-                </div>
-            </section>
-            <section class="templates">
-                <h2>ШАБЛОНЫ</h2>
-                <div class="sort">                   
-                </div>
-                <div class="cards">                   
-                </div>
-                <div class="pages">                   
-                </div>
-            </section>
-        </main>
-        <footer>
-            <h1>КАК НАС НАЙТИ</h1>
-            <div class="map"><a href=""></a></div>
-            <ul>
-                <li><a class="social-media" href=""><img scr="" alt="логотип VK"></a></li>
-                <li><a class="social-media" href=""><img scr="" alt="логотип Facebook"></a></li>
-                <li><a class="social-media" href=""><img scr="" alt="логотип Instagram"></a></li>
+            </div>
+
+
+            <div class="grid">
+            </div>
+            <div class="features">
+            </div>
+            <div class="button">
+            </div>
+        </section>
+        <section class="templates">
+            <h2 class="hidden">ШАБЛОНЫ</h2>
+            <div class="sort">
+            </div>
+            <div class="cards">
+            </div>
+            <div class="pages">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h1 class="hidden">КАК НАС НАЙТИ</h1>
+        <div class="map"><img class="img" src="img/map.jpg"></div>
+        <div class="footer-bottom">
+            <ul class="list">
+                <li>
+                    <a class="social-media" href="https://vk.com">
+                        <img class="img social-logo" src="img/vk-icon.png" width="26.1" height="15" alt="логотип VK">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-media" href="https://facebook.com">
+                        <img class="img social-logo" src="img/fb-icon.png" width="12" height="22"
+                            alt="логотип Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-media" href="https://instagram.com">
+                        <img class="img social-logo" src="img/insta-icon.png" width="21" height="21"
+                            alt="логотип Instagram">
+                    </a>
+                </li>
             </ul>
-            <p class="header-size-36">Давайте дружить, это выгодно!</p>
-            <p>скидка 10% для друзей из социальных сетей.</p>
-        </footer>
-    </body>
+            <div class="sales">
+                <p class="header-footer">Давайте дружить, это выгодно!</p>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
 </html>
