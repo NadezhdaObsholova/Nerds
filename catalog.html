@@ -12,9 +12,7 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="page-body inner-page">
@@ -24,8 +22,8 @@
 
             <div>
                 <a class="link main-logo" href="index.html">
-                    <img class="img main-logo" src="img/nerds-logo.png"
-                        width="160" height="65" alt="Логотип студии"></a>
+                    <img class="img main-logo" src="img/nerds-logo.png" width="160" height="65"
+                        alt="Логотип студии"></a>
             </div>
 
             <div> <a class="link" href="blank.html">Студия</a> </div>
@@ -37,109 +35,96 @@
                 <a class="link main-cart" href="blank.html">Корзина</a>
             </div>
         </header>
-        <main class="main-content">
+
+        <main>
             <h1 class="hidden">ИНТЕРНЕТ-МАГАЗИН "НЁРДС"</h1>
-            <section class="greeting">
+            <div class="inner-header">
                 <h2 class="hidden">ПРИВЕТСТВИЕ</h2>
                 <div class="greeting-header">Магазин готовых шаблонов
                 </div>
-            </section>
+            </div>
             <div class="catalog">
+
 
                 <section class="filter">
                     <h2 class="hidden">ФИЛЬТР</h2>
-                    <div class="cost">Стоимость
+                    <div class="filter-title">Стоимость
                         <div class="slider-holder">
                             <div class="slidecontainer">
-
-                                <input type="range" min="1" max="150"
-                                    value="100" class="slider" id="myRange">
+                                <input type="range" min="1" max="150" value="100" class="slider" id="myRange">
                             </div>
                         </div>
                     </div>
                     <form method="get" action="https://echo.htmlacademy.ru">
                         <fieldset>
-                            <legend>Сетка</legend>
+                            <legend class="filter-title">Сетка</legend>
                             <ul class="list">
                                 <li>
-                                    <input type="radio" name="grid"
-                                        value="adopted" id="radio-adopted"
-                                        checked>
-                                    <label
-                                        for="radio-adopted">Адоптивная</label>
+                                    <input type="radio" name="grid" value="adopted" id="radio-adopted" checked>
+                                    <label for="radio-adopted">Адоптивная</label>
                                 </li>
                                 <li>
-                                    <input type="radio" name="grid"
-                                        value="fixed" id="radio-fixed">
-                                    <label
-                                        for="radio-fixed">Фиксированная</label>
+                                    <input type="radio" name="grid" value="fixed" id="radio-fixed">
+                                    <label for="radio-fixed">Фиксированная</label>
                                 </li>
                                 <li>
-                                    <input type="radio" name="grid"
-                                        value="flexed" id="radio-flexed">
+                                    <input type="radio" name="grid" value="flexed" id="radio-flexed">
                                     <label for="radio-flexed">Резиновая</label>
                                 </li>
                             </ul>
                         </fieldset>
                         <fieldset>
-                            <legend>Особенности</legend>
+                            <legend class="filter-title">Особенности</legend>
                             <ul class="list">
                                 <li>
-                                    <input type="checkbox" name="slider"
-                                        id="filter-slider" checked>
+                                    <input type="checkbox" name="slider" id="filter-slider" checked>
                                     <label for="filter-slider">Слайдер</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="benefits"
-                                        id="filter-benefits">
+                                    <input type="checkbox" name="benefits" id="filter-benefits">
                                     <label for="filter-benefits">Блок
                                         преимуществ</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="news"
-                                        id="filter-news" checked>
+                                    <input type="checkbox" name="news" id="filter-news" checked>
                                     <label for="filter-news">Новости</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="galery"
-                                        id="filter-galery">
+                                    <input type="checkbox" name="galery" id="filter-galery">
                                     <label for="filter-galery">Галерея</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="cart"
-                                        id="filter-cart">
+                                    <input type="checkbox" name="cart" id="filter-cart">
                                     <label for="filter-cart">Корзина</label>
                                 </li>
                             </ul>
                         </fieldset>
-                        <button type="submit">Показать</button>
+                        <button class="button" type="submit">Показать</button>
                     </form>
-
-
-                    <div class="grid">
-                    </div>
-                    <div class="features">
-                    </div>
-                    <div class="button">
-                    </div>
                 </section>
+
+
+
+
                 <section class="templates">
                     <h2 class="hidden">ШАБЛОНЫ</h2>
+
+                    <div class="sorting">
+                        <p class="sorting-title">Сортировать:</p>
+                        <div class="sort-options">
+                            <button class="button by-price">по цене</button>
+                            <button class="button by-type">по типу</button>
+                            <button class="button by-name">по названию</button>
+                            <button class="button arrow down"><img class="img" src="img/catalog/arrow-down.svg" alt="в порядке убывания"></button>
+                            <button class="button arrow up"><img class="img" src="img/catalog/arrow-up.svg" alt="в порядке возрастания"></button>    
+                        </div>
+                    </div>
+                    
                     <ul class="list">
-                        <li>
-                            <p>Сортировать</p>
-                        </li>
-                        <li>
-                            <button>по типу</button>
-                            <button>по цене</button>
-                            <button>по названию</button>
-                        </li>
+
                         <li class="card">
-                            <img class="img card-top-line"
-                                src="img/catalog/card-top-line.svg" width="360"
-                                height="40">
-                            <img class="img" src="img/catalog/sedona.jpg"
-                                width="360" height="580">
+                            <img class="img card-top-line" src="img/catalog/card-top-line.svg" width="360" height="40">
+                            <img class="img" src="img/catalog/sedona.jpg" width="360" height="580">
                             <div class="choose-hider">
                                 <div class="chosen-card">
                                     <a class="link name-card" href="">Sedona</a>
@@ -151,11 +136,8 @@
                             </div>
                         </li>
                         <li class="card">
-                            <img class="img card-top-line"
-                                src="img/catalog/card-top-line.svg" width="360"
-                                height="40">
-                            <img class="img" src="img/catalog/pink-app.jpg"
-                                width="360" height="580">
+                            <img class="img card-top-line" src="img/catalog/card-top-line.svg" width="360" height="40">
+                            <img class="img" src="img/catalog/pink-app.jpg" width="360" height="580">
                             <div class="choose-hider">
                                 <div class="chosen-card">
                                     <a class="link name-card" href="">Pink
@@ -169,26 +151,19 @@
                         </li>
 
                         <li class="card">
-                            <img class="img card-top-line"
-                                src="img/catalog/card-top-line.svg" width="360"
-                                height="40">
-                            <img class="img" src="img/catalog/borodinski.jpg"
-                                width="360" height="580">
+                            <img class="img card-top-line" src="img/catalog/card-top-line.svg" width="360" height="40">
+                            <img class="img" src="img/catalog/borodinski.jpg" width="360" height="580">
                             <div class="choose-hider">
                                 <div class="chosen-card">
-                                    <a class="link name-card"
-                                        href="">Borodinski</a>
+                                    <a class="link name-card" href="">Borodinski</a>
                                     <p class="about-card">Описание компании</p>
                                     <button class="buy">9 900 &#8381;</button>
                                 </div>
                             </div>
                         </li>
                         <li class="card">
-                            <img class="img card-top-line"
-                                src="img/catalog/card-top-line.svg" width="360"
-                                height="40">
-                            <img class="img" src="img/catalog/mishka.jpg"
-                                width="360" height="580">
+                            <img class="img card-top-line" src="img/catalog/card-top-line.svg" width="360" height="40">
+                            <img class="img" src="img/catalog/mishka.jpg" width="360" height="580">
                             <div class="choose-hider">
                                 <div class="chosen-card">
                                     <a class="link name-card" href="">Mishka</a>
@@ -198,11 +173,8 @@
                             </div>
                         </li>
                         <li class="card">
-                            <img class="img card-top-line"
-                                src="img/catalog/card-top-line.svg" width="360"
-                                height="40">
-                            <img class="img" src="img/catalog/aplus.jpg"
-                                width="360" height="580">
+                            <img class="img card-top-line" src="img/catalog/card-top-line.svg" width="360" height="40">
+                            <img class="img" src="img/catalog/aplus.jpg" width="360" height="580">
                             <div class="choose-hider">
                                 <div class="chosen-card">
                                     <a class="link name-card" href="">A+</a>
@@ -212,11 +184,8 @@
                             </div>
                         </li>
                         <li class="card">
-                            <img class="img card-top-line"
-                                src="img/catalog/card-top-line.svg" width="360"
-                                height="40">
-                            <img class="img" src="img/catalog/kvast.jpg"
-                                width="360" height="580">
+                            <img class="img card-top-line" src="img/catalog/card-top-line.svg" width="360" height="40">
+                            <img class="img" src="img/catalog/kvast.jpg" width="360" height="580">
                             <div class="choose-hider">
                                 <div class="chosen-card">
                                     <a class="link name-card" href="">Кваст</a>
@@ -228,31 +197,56 @@
                         </li>
 
                     </ul>
+
+                    <div class="pages">
+                        <div class="page-number first">1
+                        </div>
+                        <div class="page-number">2
+                        </div>
+                        <div class="page-number">3
+                        </div>
+                        <div class="page-next">следующая
+                        </div>
+                    </div>
                 </section>
             </div>
 
         </main>
         <footer class="footer">
             <h1 class="hidden">КАК НАС НАЙТИ</h1>
-            <div class="map"><img class="img" src="img/map.jpg"></div>
+            <div class="map">
+
+                <img class="img" src="img/map.jpg" width="1440" height="416">
+
+
+                <div class="marker-holder">
+                    <div class="connection">
+                        <div class="connection-title">NЁRDS DESIGN STUDIO</div>
+                        <div>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</div>
+                        <div>+7 800 555-86-28</div>
+                        <button class="button">напишите нам</button>
+                    </div>
+                    <img class="img map-marker" src="img/map-marker.png" width="231" height="190">
+                </div>
+
+            </div>
             <div class="footer-bottom">
                 <ul class="list">
                     <li>
                         <a class="social-media" href="https://vk.com">
-                            <img class="img social-logo" src="img/vk-icon.png"
-                                width="26.1" height="15" alt="логотип VK">
+                            <img class="img social-logo" src="img/vk-icon.png" width="26.1" height="15"
+                                alt="логотип VK">
                         </a>
                     </li>
                     <li>
                         <a class="social-media" href="https://facebook.com">
-                            <img class="img social-logo" src="img/fb-icon.png"
-                                width="12" height="22" alt="логотип Facebook">
+                            <img class="img social-logo" src="img/fb-icon.png" width="12" height="22"
+                                alt="логотип Facebook">
                         </a>
                     </li>
                     <li>
                         <a class="social-media" href="https://instagram.com">
-                            <img class="img social-logo"
-                                src="img/insta-icon.png" width="21" height="21"
+                            <img class="img social-logo" src="img/insta-icon.png" width="21" height="21"
                                 alt="логотип Instagram">
                         </a>
                     </li>

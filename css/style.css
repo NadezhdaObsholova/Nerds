@@ -50,13 +50,13 @@
     background-color: #424242;     
 }
 .page-body {
+    box-sizing: border-box;
     display: flex;
     width: 1440px;
     min-height: 100%;
     min-width: 960px;
     margin: 0 auto;
     padding: 0;
-    box-sizing: border-box; 
     font-family: "Roboto", "Arial", serif;
     font-weight: 400;
     font-size: 16px;
@@ -97,7 +97,6 @@ display: block;
     color: var(--basic-black);
     align-items: center; 
 }
-
 .main-header .link:hover{
     color: var(--basic-pink-light);
 }
@@ -108,7 +107,11 @@ display: block;
 .button {
     display: flex;
     align-items: center;
-    justify-content: center;       
+    justify-content: center;  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;     
 }
 .greeting .button {
     width: 240px;
@@ -301,7 +304,57 @@ display: block;
     grid-template-rows: min-content min-content;    
 }
 .map{
+    height: 416px;
     padding: 80px 0px 68px 0px;
+}
+.marker-holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: -416px;    
+    width: 1440px;
+    height: 416px;
+}
+.connection{
+    display: flex;
+    flex-direction: column;   
+    width: 219px;
+    height: 208px;
+    background-color: var(--basic-white);
+    padding: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+    margin-top: 54px;
+    margin-left: 140px;
+}
+.connection-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+    margin-bottom: 23px;
+}
+.map-marker{
+    margin-top: 70px;
+    margin-left: 97px;
+}
+.connection .button{
+width: 220px;
+height: 50px;
+border-radius: 3px;
+border: none;
+margin-top: 38px;
+color: var(--basic-white);
+background-color: var(--basic-pink-light);
+}
+.connection .button:hover{    
+    background-color: var(--basic-pink-middle);
+}
+.connection .button:active{    
+    background-color: var(--basic-pink-dark);
 }
 .footer-bottom{
     display: grid;
@@ -339,20 +392,29 @@ display: block;
 }
 .catalog{
     display: grid;
-    grid-template-columns: 260px 1fr;    
+    grid-template-columns: 260px 760px;    
     grid-column-gap: 140px;
-    padding: 0px 140px;
+    margin-left: 140px;
+    margin-right: 140px;
+    
 }
 .shop{
     border-bottom: solid 2px var(--basic-pink-light);
 }
+.templates {
+    display: grid;    
+    grid-template-rows: 103px 1fr 105px;      
+}
 .templates .list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 103px 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 40px;
-    grid-row-gap: 30px;
-    padding: 0px 140px;
+    grid-row-gap: 30px;    
+}
+.inner-header{    
+    padding: 0px 140px 0px 140px;
+    background-color: var(--basic-gray);
 }
 .buy{
     width: 200px;
@@ -388,7 +450,7 @@ display: block;
 .chosen-card{
     text-align: center;
     width: 360px;
-    height: 230px;
+    height: 204px;
     position: relative;
     top: -230px;
     padding-top: 26px;
@@ -419,7 +481,10 @@ display: block;
 }
 .card .img:not(.card-top-line){
     outline: solid 2px var(--basic-gray-dark);
-    outline-offset: -2px;    
+    outline-offset: -2px;   
+}
+.card .img:not(.card-top-line){
+   border-radius: 3px; 
 }
 .choose-hider{
     display: none;
@@ -427,9 +492,110 @@ display: block;
 .card:hover .choose-hider{
     display: initial;
 }
+.filter {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;    
+}
 
+.filter-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;     
+}
 
+.filter .button {
+    width: 260px;
+    height: 50px;
+    border-radius: 3px;
+    border: none;
+    margin-top: 38px;
+    background-color: var(--basic-gray);
+}
 
+.sorting{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+         
+}
+.sorting-title{
+    display: flex;
+    align-items: center;
+}
+.sort-options{
+    display: flex;
+}
+.sorting .button{    
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;  
+    border: none;
+    width: max-content;
+    padding: 0px; 
+    margin-right: 25px;
+    background-color: inherit;
+}
+.sorting .button:not(.by-price){
+    opacity: 30%;
+}
+.sorting .button:hover:not(.by-price){
+    opacity: 60%;
+}
+.sorting .button:active:not(.by-price){
+    opacity: 100%; 
+}
+
+.button.arrow{  
+    justify-self: end;  
+    padding: 0px; 
+    margin-right: 0px;
+    margin-left: 18px;     
+}
+.arrow.down{
+    margin-left: auto;
+}
+
+.pages{
+    display: flex;   
+    align-items: end; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px; 
+    text-transform: uppercase;
+}
+
+.page-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 11px;
+    border-radius: 3px;
+    background-color: var(--basic-gray);      
+}
+.page-number.first{   
+    outline: solid 3px #DBDBDB;
+    outline-offset: -3px; 
+    border-radius: 3px;
+    background-color: var(--basic-white);
+    
+}
+.page-next{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: var(--basic-gray);
+}
 
 
 
@@ -447,7 +613,6 @@ display: block;
 .slidecontainer {
     width: 210px; /* Width of the outside container */
 }
-
 /* The slider itself */
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
@@ -460,12 +625,10 @@ display: block;
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
 }
-
 /* Mouse-over effects */
 .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
 }
-
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
@@ -477,7 +640,6 @@ display: block;
     border-radius: 50%;
     cursor: pointer; /* Cursor on hover */
 }
-
 .slider::-moz-range-thumb {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
