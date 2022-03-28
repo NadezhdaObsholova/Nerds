@@ -47,10 +47,22 @@
 }
 .page{
     height: 100%;  
-    background-color: #424242;     
+    background-color: #424242;  
+    box-sizing: border-box;  
 }
+
+
+/* НАСЛЕДОВАНИЕ box-sizing: border-box; */
+
+/* 
+.page *, *:before, *:after {
+        box-sizing: inherit;
+    }
+*/
+
+
 .page-body {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     display: flex;
     width: 1440px;
     min-height: 100%;
@@ -107,7 +119,7 @@ display: block;
 .button {
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;      
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
@@ -202,7 +214,7 @@ display: block;
 .main-header{
     display: grid;
     grid-template-columns: 1fr min-content min-content min-content min-content 1fr;
-    grid-column-gap: 45px;    
+    grid-column-gap: 45px;   
     padding: 49px 140px 0px 140px;
     background-color: var(--basic-gray);
 }
@@ -221,6 +233,7 @@ display: block;
 }
 
 /*   GREETING   */
+
 .greeting{
     display: grid;
     grid-template-columns: 1fr min-content;
@@ -235,6 +248,8 @@ display: block;
     padding-bottom: 9px;
     margin: 0;
 }
+
+
 
 /*   SERVICIES   */
 .servicies{
@@ -316,8 +331,7 @@ display: block;
     height: 416px;
 }
 .connection{
-    display: flex;
-    flex-direction: column;   
+      
     width: 219px;
     height: 208px;
     background-color: var(--basic-white);
