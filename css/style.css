@@ -4,8 +4,7 @@
     src: url("../fonts/roboto.woff2") format("woff2"),
     url("../fonts/roboto.woff") format("woff");
     font-weight: 400;
-    font-style: normal;
-  
+    font-style: normal;  
 }
 @font-face {
     font-family: "Roboto";
@@ -21,7 +20,6 @@
     font-weight: 700;
     font-style: normal;
 }
-
 /*Variebles*/
 :root {
     --basic-white: #FFFFFF;
@@ -41,33 +39,31 @@
 }
 
 
+
+
+
+
+
+
 /*Global*/
 .hidden{
     display: none;
 }
 .page{
     height: 100%;  
-    background-color: #424242;     
+    min-width: 1160px;   
 }
 .page-body {
-    box-sizing: border-box;
+   
     display: flex;
-    width: 1440px;
-    min-height: 100%;
-    min-width: 960px;
+    flex-direction: column;
+    min-height: 100%;   
     margin: 0 auto;
     padding: 0;
     font-family: "Roboto", "Arial", serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
-     
-}
-.conteiner{
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    align-content: start;
-    background-color: var(--basic-white);
+    line-height: 24px;     
 }
 .link{
     text-decoration: none;
@@ -81,14 +77,42 @@
 .img{
 display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*HEADER*/
+
+.wrapper{
+    height: 114px;
+    background-color: var(--basic-gray);
+}
+
+.main-header{    
+    display: grid;
+    grid-template-columns: min-content min-content 1fr;
+    width: 1160px;
+    
+    padding-top: 49px;
+    margin: auto;    
+    background-color: var(--basic-gray);
+}
+.main-nav{
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    gap: 45px;
+}
 .main-logo{
     padding-bottom: 6px;
-}
-.main-logo:hover{
-    opacity: 70%;
-}
-.main-logo:active{
-    opacity: 30%;
+    margin-right: 200px;
 }
 .main-header .link{
     text-transform: uppercase;
@@ -97,12 +121,29 @@ display: block;
     color: var(--basic-black);
     align-items: center; 
 }
-.main-header .link:hover{
-    color: var(--basic-pink-light);
-}
-.main-header .link:active{
-    color: var(--basic-black);
-    opacity: 30%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MAILN*/
+
+.main-content{
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
 }
 .button {
     display: flex;
@@ -121,13 +162,6 @@ display: block;
     color: var(--basic-white);
     background-color: var(--basic-pink-light);     
 }
-.greeting .button:hover{
-    background-color: var(--basic-pink-middle);  
-}
-.greeting .button:active{
-    color: rgba(255, 255, 255, 0.3);
-    background-color: var(--basic-pink-dark);  
-}
 .servicies .button {
     width: 160px;
     height: 50px;  
@@ -138,41 +172,14 @@ display: block;
 .web-sites .button {
    background-color: var(--basic-pink-light);
 }
-.web-sites .button:hover{
-    background-color: var(--basic-pink-middle);  
-}
-.web-sites .button:active{
-    color: rgba(255, 255, 255, 0.3);
-    background-color: var(--basic-pink-dark);  
-}
 .adds .button {
     background-color: var(--basic-green-light);
-}
-.adds .button:hover{
-    background-color: var(--basic-green-middle);  
-}
-.adds .button:active{
-    color: rgba(255, 255, 255, 0.3);
-    background-color: var(--basic-green-dark);  
 }
 .presentations .button {
     background-color: var(--basic-yellow-light);
 }
-.presentations .button:hover{
-    background-color: var(--basic-yellow-middle);  
-}
-.presentations .button:active{
-    color: rgba(255, 255, 255, 0.3);
-    background-color: var(--basic-yellow-dark);  
-}
 .customers-link .img{
     opacity: 20%;
-}
-.customers-link .img:hover{
-    opacity: 100%;
-}
-.customers-link .img:active{
-    opacity: 10%;
 }
 .social-media{
     display: flex;
@@ -183,28 +190,12 @@ display: block;
     border-radius: 50%;
     background-color: var(--basic-gray-dark);  
 }
-.social-media:hover{
-    background-color: var(--basic-pink-middle);  
-}
-.social-media:active {
-    background-color: var(--basic-pink-dark);     
-}
-.social-media:active .social-logo{    
-    opacity: 30%;
-}
 .header-size-45-64{
     font-weight: 700;
     font-size: 45px;
     line-height: 64px;
     margin-top: 0px;
     margin-bottom: -6px;
-}
-.main-header{
-    display: grid;
-    grid-template-columns: 1fr min-content min-content min-content min-content 1fr;
-    grid-column-gap: 45px;    
-    padding: 49px 140px 0px 140px;
-    background-color: var(--basic-gray);
 }
 .main-header .link:not(.main-logo){
     display: flex;
@@ -214,11 +205,17 @@ display: block;
     justify-content: end; 
 }
 
-/*   MAIN   */
-.main-content{
-    display: grid;
-    grid-template-rows: min-content min-content min-content min-content;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 /*   GREETING   */
 .greeting{
@@ -235,6 +232,21 @@ display: block;
     padding-bottom: 9px;
     margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*   SERVICIES   */
 .servicies{
@@ -312,12 +324,11 @@ display: block;
     grid-template-columns: 1fr 1fr;
     position: relative;
     top: -416px;    
-    width: 1440px;
+    /*width: 1440px;*/
     height: 416px;
 }
 .connection{
-    display: flex;
-    flex-direction: column;   
+    
     width: 219px;
     height: 208px;
     background-color: var(--basic-white);
@@ -381,6 +392,89 @@ background-color: var(--basic-pink-light);
     margin-top: 7px;
     margin-bottom: -6px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*CONDITIONS*/
+.main-logo:hover{
+    opacity: 70%;
+}
+.main-logo:active{
+    opacity: 30%;
+}
+.main-header .link:hover{
+    color: var(--basic-pink-light);
+}
+.main-header .link:active{
+    color: var(--basic-black);
+    opacity: 30%;
+}
+.web-sites .button:hover{
+    background-color: var(--basic-pink-middle);  
+}
+.web-sites .button:active{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--basic-pink-dark);  
+}
+.greeting .button:hover{
+    background-color: var(--basic-pink-middle);  
+}
+.greeting .button:active{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--basic-pink-dark);  
+}
+.adds .button:hover{
+    background-color: var(--basic-green-middle);  
+}
+.adds .button:active{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--basic-green-dark);  
+}
+.presentations .button:hover{
+    background-color: var(--basic-yellow-middle);  
+}
+.presentations .button:active{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--basic-yellow-dark);  
+}
+.customers-link .img:hover{
+    opacity: 100%;
+}
+.customers-link .img:active{
+    opacity: 10%;
+}
+.social-media:hover{
+    background-color: var(--basic-pink-middle);  
+}
+.social-media:active {
+    background-color: var(--basic-pink-dark);     
+}
+.social-media:active .social-logo{    
+    opacity: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*   CATALOG   */
