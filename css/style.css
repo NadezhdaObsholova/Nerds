@@ -565,11 +565,18 @@
     width: max-content;
     line-height: 53px; 
 }
-.close::before{
-    content: url(../img/close.svg);
+.close{    
     position: absolute;
     right: 90px;
     top: 78px;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+}
+
+.close::before{
+    content: url(../img/close.svg);
+    position: absolute;
     width: 21px;
     height: 21px;
     opacity: 0.3;
@@ -635,16 +642,22 @@
     opacity: 50%;   
     padding: 16px;
     /*** НЕ РАБОТАЕТ ВЫРАВНИВАНИЕ ТЕКСТА ***/
-    vertical-align: top;
+   
 }
 
-.pop-up-item .message{
-    width: 728px;
-    height: 86px;
+.pop-up-item textarea{
+    
+    box-sizing: border-box;
+    width: 760px;
+    height: 118px;
     margin-bottom: 98px;
-    /*** НЕ РАБОТАЕТ ВЫРАВНИВАНИЕ ТЕКСТА ***/
-    text-align: start;
-    vertical-align: top;
+    padding: 16px;  
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #444444; 
+    opacity: 50%;   
+    resize: none; 
 }
 
 
