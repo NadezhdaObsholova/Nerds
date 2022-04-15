@@ -90,6 +90,9 @@
 .img {
     display: block;
 }
+.current-nav {
+    border-bottom: solid 2px var(--basic-pink-light);
+}
 
 
 
@@ -111,7 +114,7 @@
 
 .main-header {
     display: grid;
-    grid-template-columns: min-content min-content 115px;
+    grid-template-columns: min-content auto 115px;
     gap: 200px;
     width: 1160px;
     padding-top: 49px;
@@ -121,7 +124,7 @@
 
 .main-nav {
     display: flex;
-    
+    flex-wrap: wrap;
 }
 
 .main-logo {
@@ -129,7 +132,7 @@
     
 }
 .main-nav div{
-    padding-right: 47px;
+    padding-right: 46px;
    
 }
 
@@ -471,11 +474,17 @@
     color: var(--basic-black);
     margin-bottom: 23px;
 }
-
+.map{
+    width: 1440px;
+    height: 416px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .map-marker {
     position: absolute;
-    top: 18px;
+    top: 70px;
     left: 50%;
+    transform: translateX(127px);
 }
 
 .connection .button {
@@ -496,9 +505,9 @@
     background-color: var(--basic-pink-dark);
 }
 
-.footer-bottom {
+.footer-sotial-media {
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: 1fr max-content;
     width: 1160px;
     height: 217px;
     margin: auto;
@@ -506,13 +515,14 @@
 
 .footer .list {
     display: flex;
-
+    flex-wrap: wrap;
     align-items: center;
     padding: auto;
 }
 
 .sales {
     display: flex;
+    width: 760px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -549,11 +559,13 @@
 /* POP_UP  */
 
 .pop-up-wrapper{
-    position: absolute;
+    display: none;
+    position: fixed;
     width: 960px;
     height: 590px;
     left: 50%;
     bottom:180px;
+    z-index: 2;
     transform: translateX(-480px);
     background-color: var(--basic-white);
     box-shadow: 0px 20px 40px 0px #00000066;
@@ -790,9 +802,6 @@
 
 }
 
-.shop {
-    border-bottom: solid 2px var(--basic-pink-light);
-}
 
 .templates {
     display: grid;
@@ -808,12 +817,11 @@
 }
 
 
-.buy {
-    position: absolute;
-    left: 80px;
-    bottom: 44px;;
+.buy {  
     width: 200px;
     height: 50px;    
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--basic-pink-light);
     border-radius: 3px;
     font-weight: 500;
@@ -846,24 +854,34 @@
 }
 
 .chosen-card {
-    text-align: center;
-    width: 360px;
-    height: 204px;
     position: relative;
-    top: -230px;
-    padding-top: 26px;
-    padding-bottom: 0px;
+    top: -230px; 
+    /*display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;  */
+    width: 360px;
+    height: 231px;          
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     background-color: var(--basic-gray);
 }
 
 .name-card {
+    display: flex;
+    align-items: end;   
+    justify-content: center;
+    padding-top: 26px;  
+    margin-left: auto;
+    margin-right:  auto;  
+    width: 255px;
+    height: 37px;    
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
     color: var(--basic-black);
+    overflow: hidden;
 }
 
 .name-card:hover {
@@ -876,10 +894,19 @@
 }
 
 .about-card {
+    
+    width: 255px;
+    height: 37px;    
+    margin-top: 12px;
+    margin-bottom: 32px;  
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     color: #666666;
+    overflow: hidden;
 }
 
 .card .img:not(.card-top-line) {
@@ -888,12 +915,14 @@
     border-top: none;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
-    
+    background-color: var(--basic-gray);
+    object-fit: contain;
+       
 }
 
 
 .choose-hider {
-    display: none;
+  display: none;
 }
 
 .card:hover .choose-hider {
@@ -978,6 +1007,7 @@
 
 .pages {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     height: 164px;  
     font-weight: 500;
@@ -1021,10 +1051,12 @@
     border-radius: 3px;
     background-color: var(--basic-gray);
 }
+.to-show:hover,
 .page-next:hover {   
     background-color: #dfdfdf; 
     
 }
+.to-show:active,
 .page-next:active {   
     background-color: #d5d5d5; 
     box-shadow: 0px 3px 0px 0px #0001011A inset;

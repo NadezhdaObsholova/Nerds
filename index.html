@@ -34,6 +34,7 @@
                 <div> <a class="link" href="blank.html">Клиенты</a> </div>
                 <div> <a class="link" href="catalog.html">Магазин</a> </div>
                 <div> <a class="link" href="blank.html">Контакты</a> </div>
+                
             </div>
 
             <div>
@@ -224,32 +225,37 @@
         </section>
 
     </main>
+    
+
     <footer class="footer">
-        <h1 class="hidden">КАК НАС НАЙТИ</h1>
+        <section class="wrapper">
+            <h1 class="hidden">КАК НАС НАЙТИ</h1>
 
 
-        <!-- <img class="img" src="img/map.jpg" >-->
+            <img class="img map" src="img/map.jpg" alt="наб. Реки Карповки,
+        5 лит П, Санкт-Петербург">
 
-        <iframe class="map"
+            <!--<iframe class="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.4084478283276!2d30.316597087553898!3d59.968360741518346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696314db404b36b%3A0x1d934f1978240bba!2zTtGRcmRz!5e0!3m2!1sru!2sru!4v1649367722281!5m2!1sru!2sru"
             width="100%" height="417" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+            referrerpolicy="no-referrer-when-downgrade" title="наб. Реки Карповки,
+            5 лит П, Санкт-Петербург">
+        </iframe> -->
+
+            <div class="connection">
+                <div class="connection-title">NЁRDS DESIGN STUDIO</div>
+                <div>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</div>
+                <div>+7 800 555-86-28</div>
+                <button class="button">напишите нам</button>
+            </div>
+            <img class="img map-marker" src="img/map-marker.png" width="231" height="190">
+
+        </section>
 
 
-        <div class="connection">
-            <div class="connection-title">NЁRDS DESIGN STUDIO</div>
-            <div>наб. Реки Карповки,<br>5 лит П, Санкт-Петербург</div>
-            <div>+7 800 555-86-28</div>
-            <button class="button">напишите нам</button>
-        </div>
-        <img class="img map-marker" src="img/map-marker.png" width="231" height="190">
 
-
-
-
-
-        <div class="footer-bottom">
+        <section class="footer-sotial-media">
+            <h2 class="hidden">Социальные сети</h2>
             <ul class="list">
                 <li>
                     <a class="social-media" href="https://vk.com">
@@ -268,21 +274,23 @@
                             alt="логотип Instagram">
                     </a>
                 </li>
+                <!-- ТЕСТ НА ПЕРЕПОЛНЕНИЕ-->
+
+                <!--КОНЕЦ ТЕСТА-->
             </ul>
             <div class="sales">
                 <p class="header-footer">Давайте дружить, это выгодно!</p>
                 <p>Скидка 10% для друзей из социальных сетей.</p>
             </div>
-        </div>
+        </section>
 
     </footer>
 
 
-
     <div class="pop-up-wrapper">
-        <button class="button close"></button>
+        <button class="button close" aria-label="Закрыть"></button>
         <div class="header-size-45-64">Напишите нам</div>
-        <form class="pop-up-form" action="https://echo.htmlacademy.ru" method="post" >         
+        <form class="pop-up-form" action="https://echo.htmlacademy.ru" method="post">
 
             <div class="pop-up-item">
                 <label for="name">Ваше имя:</label>
@@ -294,7 +302,7 @@
             </div>
             <div class="pop-up-item">
                 <label for="message">Текст письма:</label>
-                <textarea class="message" type="textarea" name="message"  id="message" >В свободной форме</textarea>
+                <textarea class="message" type="textarea" name="message" id="message">В свободной форме</textarea>
             </div>
 
             <button class="button" type="submit">Отправить</button>
