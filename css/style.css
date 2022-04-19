@@ -66,7 +66,7 @@
 .page-body {
     position: relative;
     display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: 120px 1fr min-content;
     min-height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -244,7 +244,7 @@
     font-weight: 700;
     font-size: 45px;
     line-height: 64px;
-    margin-top: 0px;
+    margin-top: 7px;
     margin-bottom: -6px;
 }
 
@@ -277,12 +277,15 @@
 
 .slides-holder {
     position: relative;
+    height: 425px;
 }
 
-.slide {
+.slide {   
+   
     display: grid;
     grid-template-columns: auto min-content;
     width: 1160px;
+    height: 425px;
     margin: auto;
     background-color: var(--basic-gray);
 }
@@ -291,22 +294,26 @@
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     z-index: 1;
-
 }
 
 .slide-header {
     font-weight: 700;
     font-size: 55px;
     line-height: 55px;
-    padding-top: 78px;
+    padding-top: 72px;
     padding-bottom: 0px;
     margin: 0;
     margin-bottom: 25px;
 }
 
 .slide-img {
+    
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    height: 425px;
+    
+   
+    
 }
 
 .buttons-control {
@@ -358,6 +365,7 @@
 /*   SERVICIES   */
 .servicies {
     display: flex;
+    flex-wrap: wrap;
     max-width: 1160px;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -411,40 +419,82 @@
     line-height: 24px;
     text-transform: uppercase;
     margin-top: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
 }
+
 
 .description .list {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 }
-
+/*
 .description .list:not(.percent) {
     flex-direction: column;
     justify-content: space-between;
     height: 120px;
 }
+*/
 
+.description .kind-of-jobs {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+}
+
+.percents .header-size-16{
+    text-align: center;
+}
+.percent-item{
+    line-height: 18px;
+    margin-right: 21px;
+}
+.percent-item span{
+    font-size: 26px;
+    line-height: 40px;
+    vertical-align: text-top;
+}
 /*   CUSTOMERS   */
 
 .customers {
     margin: auto;
-    padding-top: 73px;
-    padding-bottom: 80px;
+    padding-top: 61px;
+    padding-bottom: 77px;
 }
 
 .customers .list {
     display: flex;
-    justify-content: space-around;
-    width: 1160px;
+    /*justify-content: space-around;*/
+    width: 1158px;
     height: 184px;
-
     align-items: center;
     border-top: solid 2px var(--basic-gray);
     border-bottom: solid 2px var(--basic-gray);
 }
+.customers .border{
+    display: block;
+    width: 2px;
+    height: 52px;
+    background-color: var(--basic-gray);
+    margin: 0;
+}
 
 /*   FOOTER   */
+.list .htmlacademy{
+    padding-left: 32px;
+    padding-right: 48px;
+}
+.list .borodinski{
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.list  .pink{
+    padding-left: 58px;
+    padding-right: 55px;
+}
+.list  .mishka{
+    padding-left: 63px;
+    padding-right: 42px;
+}
 
 
 .footer {
@@ -473,6 +523,9 @@
     text-transform: uppercase;
     color: var(--basic-black);
     margin-bottom: 23px;
+}
+.connection-adress{
+    padding-bottom: 16px;
 }
 .map{
     width: 1440px;
@@ -526,17 +579,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .header-footer {
     font-weight: 700;
     font-size: 36px;
     line-height: 36px;
-    margin-top: 7px;
+    margin-top: 16px;
     margin-bottom: -6px;
 }
 
-.list li:not(:last-child) {
+.list .social-media:not(:last-child) {
     margin-right: 9px;
 }
 
@@ -805,7 +859,8 @@
 
 .templates {
     display: grid;
-    grid-template-rows: 133px 1fr min-content;
+    grid-template-rows: 126px 1fr min-content;
+    margin-top: 7px;
 }
 
 .templates .list {
@@ -871,11 +926,12 @@
     display: flex;
     align-items: end;   
     justify-content: center;
+    align-items: flex-start;
     padding-top: 26px;  
     margin-left: auto;
     margin-right:  auto;  
     width: 255px;
-    height: 37px;    
+    height: 30px;    
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
@@ -883,7 +939,10 @@
     color: var(--basic-black);
     overflow: hidden;
 }
+.card:hover{
+    box-shadow: 0px 6px 15px 0px #00000040;
 
+}
 .name-card:hover {
     color: var(--basic-pink-light);
 }
@@ -940,6 +999,7 @@
     font-size: 18px;
     line-height: 30px;
     text-transform: uppercase;
+    padding-top: 54px;
 }
 
 .filter .button {
@@ -960,6 +1020,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 40px;
+    
 
 }
 
@@ -1062,10 +1123,6 @@
     box-shadow: 0px 3px 0px 0px #0001011A inset;
     color: rgba(0, 0, 0, 0.3);
 }
-.filter-title{
-    padding-top: 55px;
-    
-}
 
 .filter-item,
 .radiobuttons,
@@ -1114,10 +1171,12 @@
   }
   .range-controls .toggle-min {
     left: 18px;
+    transform: translateX(20px);
   }
   
   .range-controls .toggle-max {
     left: 160px;
+    transform: translateX(-20px);
   }
   .price-controls {
     display: flex;
@@ -1142,11 +1201,6 @@
     font-size: inherit;
   }
 
-
-
-.radiobuttons .filter-title{
-    padding-top: 55px;
-}
 .checkboxes .filter-title{
     padding-top: 43px;
 }
@@ -1185,14 +1239,7 @@
 .input-checkbox:checked:hover + label::after{    
     opacity: 1;    
   }
- 
-
-
-
-
-
-
-  .input-radio + label::before{
+ .input-radio + label::before{
     content: "";
     position: absolute;
     box-sizing: border-box;
@@ -1222,21 +1269,12 @@
     background-color: #4d4d4d;
     border-radius: 50%; 
     opacity: 0.4;    
-  }
- 
-
-
-
-
-
-
-
-
-  .radiobuttons .list,
-  .checkboxes .list{
-      display:flex;
-      flex-direction: column;
-  }
+}
+ .radiobuttons .list,
+.checkboxes .list{
+    display:flex;
+    flex-direction: column;
+}
 .checkbox-option,
 .radiobutton-option{
     padding-left: 37px;
