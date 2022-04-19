@@ -183,6 +183,9 @@
     display: grid;
     grid-template-rows: min-content auto auto auto;
     margin-bottom: 0;
+
+    /*НОВАЯ СТРОКА*/
+    z-index: 1;
 }
 
 .button {
@@ -288,6 +291,7 @@
     height: 425px;
     margin: auto;
     background-color: var(--basic-gray);
+
 }
 
 .slide-text {
@@ -307,12 +311,12 @@
 }
 
 .slide-img {
-    
+    display: grid;
+    align-items: flex-end;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     height: 425px;
-    
-   
+    align-content: end; 
     
 }
 
