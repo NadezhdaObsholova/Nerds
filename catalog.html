@@ -34,7 +34,7 @@
             <div class="main-nav">
                 <div> <a class="link" href="blank.html">Студия</a> </div>
                 <div> <a class="link" href="blank.html">Клиенты</a> </div>
-                <div> <a class="link" href="catalog.html">Магазин</a> </div>
+                <div> <a class="link current-nav" href="catalog.html">Магазин</a> </div>
                 <div> <a class="link" href="blank.html">Контакты</a> </div>
 
             </div>
@@ -50,7 +50,7 @@
 
     <main>
         <div class="wrapper">
-            <h2 class="hidden">ИНТЕРНЕТ-МАГАЗИН "НЁРДС"</h2>
+            <h2 class="visualy-hidden">КАТАЛОГ МАГАЗИНА "НЁРДС"</h2>
             <p class="inner-header">Магазин готовых шаблонов</p>
         </div>
 
@@ -60,7 +60,7 @@
 
 
             <section class="filter">
-                <h3 class="hidden">ФИЛЬТР</h3>
+                <h3 class="visualy-hidden">ФИЛЬТР</h3>
 
                 <form method="get" action="https://echo.htmlacademy.ru">
 
@@ -97,17 +97,17 @@
                         <legend class="filter-title">Сетка</legend>
                         <ul class="list">
                             <li class="radiobutton-option">
-                                <input class="input-radio hidden" type="radio" name="grid" value="adopted"
+                                <input class="input-radio visualy-hidden" type="radio" name="grid" value="adopted"
                                     id="radio-adopted" checked>
                                 <label for="radio-adopted">Адаптивная</label>
                             </li>
                             <li class="radiobutton-option">
-                                <input class="input-radio hidden" type="radio" name="grid" value="fixed"
+                                <input class="input-radio visualy-hidden" type="radio" name="grid" value="fixed"
                                     id="radio-fixed">
                                 <label for="radio-fixed">Фиксированная</label>
                             </li>
                             <li class="radiobutton-option">
-                                <input class="input-radio hidden" type="radio" name="grid" value="flexed"
+                                <input class="input-radio visualy-hidden" type="radio" name="grid" value="flexed"
                                     id="radio-flexed">
                                 <label for="radio-flexed">Резиновая</label>
                             </li>
@@ -120,27 +120,27 @@
                         <legend class="filter-title">Особенности</legend>
                         <ul class="list">
                             <li class="checkbox-option">
-                                <input class="hidden input-checkbox" type="checkbox" name="slider" id="filter-slider"
+                                <input class="visualy-hidden input-checkbox" type="checkbox" name="slider" id="filter-slider"
                                     checked>
                                 <label for="filter-slider">Слайдер</label>
                             </li>
                             <li class="checkbox-option">
-                                <input class="hidden input-checkbox" type="checkbox" name="benefits"
+                                <input class="visualy-hidden input-checkbox" type="checkbox" name="benefits"
                                     id="filter-benefits">
                                 <label for="filter-benefits">Блок
                                     преимуществ</label>
                             </li>
                             <li class="checkbox-option">
-                                <input class="hidden input-checkbox" type="checkbox" name="news" id="filter-news"
+                                <input class="visualy-hidden input-checkbox" type="checkbox" name="news" id="filter-news"
                                     checked>
                                 <label for="filter-news">Новости</label>
                             </li>
                             <li class="checkbox-option">
-                                <input class="hidden input-checkbox" type="checkbox" name="galery" id="filter-galery">
+                                <input class="visualy-hidden input-checkbox" type="checkbox" name="galery" id="filter-galery">
                                 <label for="filter-galery">Галерея</label>
                             </li>
                             <li class="checkbox-option">
-                                <input class="hidden input-checkbox" type="checkbox" name="cart" id="filter-cart">
+                                <input class="visualy-hidden input-checkbox" type="checkbox" name="cart" id="filter-cart">
                                 <label for="filter-cart">Корзина</label>
                             </li>
 
@@ -154,7 +154,7 @@
 
 
             <section class="templates">
-                <h3 class="hidden">ШАБЛОНЫ</h3>
+                <h3 class="visualy-hidden">ШАБЛОНЫ</h3>
 
                 <div class="sorting">
                     <p class="sorting-title">Сортировать:</p>
@@ -274,7 +274,7 @@
 
     <footer class="footer">
         <section class="wrapper">
-            <h2 class="hidden">КАК НАС НАЙТИ</h2>
+            <h2 class="visualy-hidden">КАК НАС НАЙТИ</h2>
 
 
             <img class="img map" src="img/map.jpg" alt="наб. Реки Карповки,
@@ -300,7 +300,7 @@
 
 
         <section class="footer-sotial-media">
-            <h2 class="hidden">Социальные сети</h2>
+            <h2 class="visualy-hidden">Социальные сети</h2>
             <ul class="list">
                 <li class="social-media" >
                     <a href="https://vk.com">
@@ -331,7 +331,34 @@
 
     </footer>
 
+    
+
+    <div class="pop-up display-none" tabindex="1">
+        <button class="button close" aria-label="Закрыть"></button>
+        <div class="header-size-45-64">Напишите нам</div>
+        <form class="pop-up-form" action="https://echo.htmlacademy.ru"
+            method="post">
+
+            <div class="pop-up-item">
+                <label for="name">Ваше имя:</label>
+                <input class="name" type="text" name="name" id="name"
+                    value="Имя Фамилия">
+            </div>
+            <div class="pop-up-item">
+                <label for="email">Ваш email:</label>
+                <input class="email" type="text" name="email" id="email"
+                    value="email@example.com">
+            </div>
+            <div class="pop-up-item">
+                <label for="message">Текст письма:</label>
+                <textarea class="message" name="message"
+                    id="message">В свободной форме</textarea>
+            </div>
+
+            <button class="button" type="submit" aria-label="Отправить форму контактов">Отправить</button>
+        </form>
     </div>
+    <script src="contacts.js"></script>
 </body>
 
 </html>

@@ -50,7 +50,7 @@
 
     <main>
         <div class="wrapper">
-            <h2 class="hidden">Пустая страница сайта "НЁРДС"</h2>
+            <h2 class="visualy-hidden">Пустая страница сайта "НЁРДС"</h2>
             <p class="inner-header">Ожидание контента</p>
         </div>
 
@@ -64,7 +64,7 @@
 
     <footer class="footer">
         <section class="wrapper">
-            <h2 class="hidden">КАК НАС НАЙТИ</h2>
+            <h2 class="visualy-hidden">КАК НАС НАЙТИ</h2>
 
 
             <img class="img map" src="img/map.jpg" alt="наб. Реки Карповки,
@@ -90,7 +90,7 @@
 
 
         <section class="footer-sotial-media">
-            <h2 class="hidden">Социальные сети</h2>
+            <h2 class="visualy-hidden">Социальные сети</h2>
             <ul class="list">
                 <li class="social-media" >
                     <a href="https://vk.com">
@@ -122,6 +122,33 @@
     </footer>
 
     </div>
+
+    <div class="pop-up display-none" tabindex="1">
+        <button class="button close" aria-label="Закрыть"></button>
+        <div class="header-size-45-64">Напишите нам</div>
+        <form class="pop-up-form" action="https://echo.htmlacademy.ru"
+            method="post">
+
+            <div class="pop-up-item">
+                <label for="name">Ваше имя:</label>
+                <input class="name" type="text" name="name" id="name"
+                    value="Имя Фамилия">
+            </div>
+            <div class="pop-up-item">
+                <label for="email">Ваш email:</label>
+                <input class="email" type="text" name="email" id="email"
+                    value="email@example.com">
+            </div>
+            <div class="pop-up-item">
+                <label for="message">Текст письма:</label>
+                <textarea class="message" name="message"
+                    id="message">В свободной форме</textarea>
+            </div>
+
+            <button class="button" type="submit" aria-label="Отправить форму контактов">Отправить</button>
+        </form>
+    </div>
+    <script src="contacts.js"></script>
 </body>
 
 </html>
