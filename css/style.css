@@ -619,22 +619,26 @@
 /* POP_UP  */
 
 
-.display-none{
-    display: none;
-}
+
 
 .pop-up{    
+    display: none;
     position: fixed;
     width: 960px;
     height: 590px;
-    left: 50%;
+    transform-origin: center;
+    
     bottom:180px;
     z-index: 2;
-    transform: translateX(-480px);
+/* НЕПОНЯТНЫЕ СВОЙСТВА ПОЧЕМУ 0?*/
+    margin:auto;
+    left:0;
+    right:0;
+/*  КОНЕЦ НЕПОНЯТНЫХ СВОЙСТВ */
     background-color: var(--basic-white);
-    box-shadow: 0px 20px 40px 0px #00000066;
-    
+    box-shadow: 0px 20px 40px 0px #00000066;    
 }
+
 .pop-up .header-size-45-64{
     position: absolute;
     left: 100px;
@@ -686,9 +690,7 @@
    
     position: absolute;
     left: 100px;
-    top: 153px;
-   
-    
+    top: 153px;      
     height: 353px;
 }
 .pop-up-item{
@@ -1292,3 +1294,64 @@
     margin: 10px 0 10px 0;
 }
 
+
+
+
+.hidden{
+    display: none;
+}
+
+
+.display-show{
+    display: block;
+    animation: bounce 0.6s;    
+}
+.modal-error {
+    animation: shake 0.6s;
+  }
+
+/* Animations */
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+     
+    }
+  
+    70% {
+      transform: translateY(0px);      
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+      
+    }
+  }
+
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0px);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
+  
